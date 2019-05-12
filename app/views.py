@@ -1,7 +1,7 @@
 import os
 import jwt
 from functools import wraps
-from flask import render_template
+from flask import render_template, request, jsonify
 from app import app, db, csrf
 from werkzeug.utils import secure_filename
 
