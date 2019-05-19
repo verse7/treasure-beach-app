@@ -13,3 +13,4 @@ venv/
 .idea
 
 app/static/uploads/*
+.vscode/

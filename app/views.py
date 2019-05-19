@@ -1,4 +1,6 @@
 import os
+import csv
+import json
 import jwt
 from functools import wraps
 from flask import render_template, request, jsonify
@@ -54,7 +56,23 @@ def form_errors(form):
 ###
 # API endpoints
 ###
+@app.route('/api/resources', methods=['GET'])
+def resources():
+  try:
+    with open('./app/static/assets/treasure-beach-entity_data.csv', encoding="utf8", errors='ignore') as csvfile:
+      reader = csv.DictReader(csvfile, delimiter=',', quotechar='"')
+      header = next(reader)
+      
+      events = []
+      for row in reader:
+        events.append(row)
 
+    csvfile.close()
+    events, status_code = events, 200
+  except:
+    events, status_code = [], 400
+    
+  return jsonify(events), 200
 
 ###
 # This route yields control to vue

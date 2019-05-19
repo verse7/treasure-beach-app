@@ -1,7 +1,95 @@
 body {
-    padding-top: 5rem;
+    font-family: 'Lato', sans-serif;
+}
+
+#map {
+    height: 100vh;
+}
+
+.text-small {
+    font-size: 14px; 
 }
 
 .shadow-sm {
     box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    border-radius: 5px;
+}
+
+.rounded-top-xtra {
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.nav-centre {
+    transition: all 0.2s ease-in-out;
+}
+
+.notch {
+    height: 6px;
+    width: 40px;
+    border-radius: 15px;
+    background-color: rgba(0, 0, 0, 0.15)
+}
+
+.clickable {
+    cursor: pointer;
+}
+
+.type-icon {
+    width: 40px;
+    height: 40px;
+    background-color: #ececec;
+}
+
+.overflow-x-scroll {
+    overflow-x: scroll;
+}
+
+.scrolling-wrapper {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 8px;
+}
+  
+.scrolling-wrapper .card {
+    flex: 0 0 auto;
+}
+
+.text-dark {
+    color: #222;
+}
+
+.no-outline {
+    outline: none;
+}
+
+.no-border {
+    border: none;
+}
+
+.bg-transparent {
+    background: rgba(0, 0, 0, 0);
+}
+
+.title-font {
+    font-family: 'Righteous', cursive;
+}
+
+.section-title {
+    font-size: 14px;
+}
+
+.card {
+    height: 20%;
+    width: 200px;
+    padding: 0;
+    border: none;
+    outline: none;
+}
+
+.card img {
+    width: auto;
+    height: 100px;
 }
